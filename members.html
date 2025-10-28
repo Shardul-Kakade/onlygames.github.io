@@ -23,11 +23,33 @@
   <main>
     <section class="members">
       <h1>Our Members</h1>
-      <p>Meet our passionate and skilled gaming community at NISER.</p>
+      <div class="member-list">
+        <div class="member-card">Shardul<br><span class="role">President</span></div>
+        <div class="member-card">Aarav<br><span class="role">Vice President</span></div>
+        <div class="member-card">Priya<br><span class="role">Event Manager</span></div>
+        <div class="member-card">Riya<br><span class="role">Designer</span></div>
+        <div class="member-card">Rahul<br><span class="role">Tech Lead</span></div>
+      </div>
     </section>
   </main>
   <footer>
     <p>© 2025 OnlyGames, NISER Bhubaneswar. All Rights Reserved.</p>
   </footer>
+  <script>
+    // Cursor interactivity: highlight card on mouse move
+    document.querySelectorAll('.member-card').forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        card.style.setProperty('--mouse-x', `${x}px`);
+        card.style.setProperty('--mouse-y', `${y}px`);
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.removeProperty('--mouse-x');
+        card.style.removeProperty('--mouse-y');
+      });
+    });
+  </script>
 </body>
 </html>
