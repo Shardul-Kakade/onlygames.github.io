@@ -127,6 +127,37 @@ footer {
   margin-top: 3rem;
   font-size: 1rem;
 }
+.qcard {
+  background: #1e293b;
+  color: #f1f5f9;
+  border: 1px solid #334155;
+  border-radius: 16px;
+  padding: 2rem 2.5rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  box-shadow: 0 2px 16px rgba(59,130,246,0.10);
+  position: relative;
+  transition: box-shadow 0.2s, transform 0.2s;
+  cursor: pointer;
+  overflow: hidden;
+  /* Cursor interactivity effect */
+  background-image: radial-gradient(
+    120px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(59,130,246,0.18),
+    transparent 80%
+  );
+}
+.qcard:hover {
+  box-shadow: 0 6px 32px rgba(59,130,246,0.25);
+  transform: translateY(-4px) scale(1.04);
+}
+.qcard .role {
+  display: block;
+  color: #a21caf;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  font-weight: 400;
+}
 /*
   To change section backgrounds, edit the section rule above
   To add more custom styles, add below
