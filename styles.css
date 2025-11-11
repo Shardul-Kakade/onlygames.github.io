@@ -236,7 +236,7 @@ body {
 }
 
 .board {
-  --rcard-width: min(500px, 20vmin);
+  --rcard-width: min(1000px, 20vmin);
   display: flex;
   align-items: center;
   width: calc(4 * var(--rcard-width));
